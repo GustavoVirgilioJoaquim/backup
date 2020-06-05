@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guvi.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="barra-menu">
+            <div class="logo">
+                <button id="pagInicial" onclick="vitrine()">Guvi.</button>
+            </div>
+            <div class="menu">
+                <input type="text" id="pesquisar" placeholder="Pesquisar" onclick="ocultarCartao()">
+            </div>
+            <div class="entrada">
+                <button id="login" onclick="login()">Login</button>
+                <button id="registrar" onclick="cadastro()">Registrar</button>
+                <button id="usuario">Usuario</button>
+                <button id="logout" onclick="logout()">Logout</button>
+            </div>
+        </header>
+    </div>
+    <section class="conteudo">
+        <!-- <iframe src="/vitrine" id="frame"></iframe> -->
+        <iframe src="./login.html" id="frame"></iframe>
+    </section>
+    <script>
+        function login(){
+            conteudoFrame = document.getElementById("frame")
+            conteudoFrame.src = "login.html"
+            localStorage.clear()
+        }
+        function vitrine(){
+            conteudoFrame = document.getElementById("frame")
+            conteudoFrame.src = "vitrine.html"
+        }
+        function cadastro(){
+            conteudoFrame = document.getElementById("frame")
+            conteudoFrame.src = "cadastroCliente.html"
+        }
+        function ocultarCartao(){
+            if(document.querySelector('#samsung_10')){
+                document.getElementById('samsung_s10').style.display = 'none';
+            }
+        }
+        const loginVerifica = localStorage.getItem('login')
+        if(loginVerifica){
+            console.log("Logou...")
+            document.getElementById('usuario').innerText = "Gustavo"
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('registrar').style.display = 'none';
+            document.getElementById('logout').style.display = 'contents';
+            document.getElementById('usuario').style.display = 'contents';
+            document.getElementById('usuario').value = localStorage.getItem('login');
+        } else {
+            console.log("Deslogou...")
+        }
+        function logout(){
+            console.log("Saiu...")
+            document.getElementById('login').style.display = 'contents';
+            document.getElementById('registrar').style.display = 'contents';
+            document.getElementById('logout').style.display = 'none';
+            document.getElementById('usuario').style.display = 'none';
+            document.getElementById('usuario').value = localStorage.getItem('login');
+        }
+    </script>
+</body>
+</html>

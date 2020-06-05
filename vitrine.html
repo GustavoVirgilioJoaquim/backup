@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/vitrine.css">
+</head>
+<body>
+    <p id="title-categoria">Celulares</p>
+    <hr>
+    <div class="container">
+        <div class="curso" id="iphone_11"> 
+            <img src="../IMAGENS/iphone_11.png" />
+            <div class="curso-info">
+                <h4>Iphone 11 Pro Max</h4>
+                <p>Apple</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$7000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="samsung_s10" onclick="detalhe()">
+            <img src="../IMAGENS/s10.png" />
+            <div class="curso-info">
+                <h4>S10+</h4>
+                <p>Samsung</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$3000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="samsung_s20" onclick="detalhe()">
+            <img src="../IMAGENS/s20.png" />
+            <div class="curso-info">
+                <h4>S20+</h4>
+                <p>Samsung</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$7000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="mi9" onclick="detalhe()">
+            <img src="../IMAGENS/mi9.png" />
+            <div class="curso-info">
+                <h4>Mi9</h4>
+                <p>Xiaomi</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$4000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="iphone_x" onclick="detalhe()">
+            <img src="../IMAGENS/iphone_x.png" />
+            <div class="curso-info">
+                <h4>Iphone X</h4>
+                <p>Iphone</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$3000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="iphone_x" onclick="detalhe()">
+            <img src="../IMAGENS/iphone_x.png" />
+            <div class="curso-info">
+                <h4>Iphone X</h4>
+                <p>Iphone</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$3000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="iphone_x" onclick="detalhe()">
+            <img src="../IMAGENS/iphone_x.png" />
+            <div class="curso-info">
+                <h4>Iphone X</h4>
+                <p>Iphone</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$3000,00</span>
+            </div>
+        </div>
+
+        <div class="curso" id="iphone_x" onclick="detalhe()">
+            <img src="../IMAGENS/iphone_x.png" />
+            <div class="curso-info">
+                <h4>Iphone X</h4>
+                <p>Iphone</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-por">R$3000,00</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    function detalhe(){
+        conteudoFrame = document.getElementById("frame")
+        conteudoFrame.src = "detalheProduto.html"
+    }
+</script>
+</html>

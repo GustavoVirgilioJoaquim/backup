@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/esqueciSenha.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="esqueci-senha">
+        <div class="conteudo">
+            <p>Informe o seu e-mail abaixo</p>
+            <input type="text" id="login">
+            <button id="enviar" onclick="enviarEmail()">Enviar</button>
+        </div>
+    </div>
+    <script>
+        function enviarEmail(){
+        const login = document.querySelector('#login').value
+        console.log(login);
+            alert("Sua nova senha foi enviada para " + login)
+            window.location.replace("login.html")
+        }
+    </script>
+</body>
+</html>

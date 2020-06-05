@@ -1,0 +1,30 @@
+.esqueci-senha{
+    width: 240px;
+    height: 270px;
+    border: solid 1px #444;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 200px;
+    border-radius: 2px;
+}
+.conteudo{
+    padding: 30px;
+    margin: auto;
+}
+#enviar{
+    background-color: #222; 
+    border: none;
+    color: white;
+    margin-top: 60px;
+    margin-left: 45px;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+#logar:hover{
+    background-color: #555;
+    transition: 0.5s;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login">
+        <div class="conteudo">
+            <p>Login</p>
+            <input type="text" id="login">
+            <p>Senha</p>
+            <input type="text" id="senha"><br><br>
+            <p id="erro-login">Senha ou e-mail inválido.</p><br>
+            <button id="logar" onclick="logar()">Login</button>
+        </div>
+    </div>
+    <script>
+        localStorage.setItem('countErroLogin',0)
+        let countErroLogin = localStorage.getItem('countErroLogin')
+        console.log(countErroLogin)
+        function logar(){
+            if(countErroLogin == 3)
+            {
+                alert("Número máximo de tentativas atingido.")
+                window.location.replace("esqueciSenha.html")
+                localStorage.clear()
+            } else {
+                if(login.value == "gu" && senha.value == "123"){
+                    localStorage.setItem('login', login.value)
+                    console.log(localStorage.getItem('login'))
+                    document.location.reload(true);
+                    window.location.replace("vitrine.html")
+                } else {
+                    document.getElementById('erro-login').style.display = 'contents'
+                    localStorage.setItem('countErroLogin', countErroLogin++)
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

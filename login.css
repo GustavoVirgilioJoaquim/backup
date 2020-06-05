@@ -1,0 +1,35 @@
+.login{
+    width: 240px;
+    height: 300px;
+    border: solid 1px #444;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 200px;
+    border-radius: 2px;
+}
+.conteudo{
+    padding: 30px;
+    margin: auto;
+}
+#erro-login{
+    display: none;
+    font-size: 13px;
+    color: rgb(216, 74, 74);
+}
+#logar{
+    background-color: #222; 
+    border: none;
+    color: white;
+    margin-top: 20px;
+    margin-left: 45px;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+#logar:hover{
+    background-color: #555;
+    transition: 0.5s;
+}
